@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "start": "npm run build && npm run serve",
+    "serve": "fly server",
+    "build": "babel src --out-dir lib"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0",
+    "cheerio": "^1.0.0-rc.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@fly/fly": "^0.42.2"
+  }
+}

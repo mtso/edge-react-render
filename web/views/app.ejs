@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title><%= title %></title>
+
+  <meta name="react_render_bundle" content="<%- renderPath %>">
+  <meta name="react_app_initial_state" content="<%= JSON.stringify(initialState) %>">
+  <meta name="react_app_root_selector" content="#app">
+  <script>
+    const stateContainer = document.querySelector('meta[name="react_app_initial_state"]')
+    window.__INITIAL_STATE__ = JSON.parse(stateContainer.getAttribute('content'))
+  </script>
+</head>
+<body>
+  <div id="app"></div>
+  <script src="<%- bundlePath %>"></script>
+</body>
+</html>
