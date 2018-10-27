@@ -3,6 +3,7 @@ import { render, hydrate } from 'react-dom'
 
 import App from './index'
 
+// Initialize the React app on the client with a delay so that pre-rendered markup is noticeable.
 setTimeout(function() {
   const initialState = window.__INITIAL_STATE__ || { name: 'default client name' }
 
@@ -22,5 +23,5 @@ setTimeout(function() {
       document.querySelector('#app')
     )
   }
-  
+
 }, 2000)
